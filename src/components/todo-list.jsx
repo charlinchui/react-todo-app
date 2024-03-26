@@ -4,7 +4,6 @@ import Todo from './todo'
 const TodoList = () => {
 
     const [newTodo, setNewTodo] = useState("");
-    const isTrue = true;
     const [todos, setTodos] = useState([]);
 
     useEffect(()=>{
@@ -29,7 +28,6 @@ const TodoList = () => {
     return (
        
         <div className='todo-list'>
-            {isTrue ? <div> ITS TRUEEE </div> : <div>ITS NOT TRUE!</div>}
             <div className="add-menu">
                 <input type='text' value={newTodo} name="new-todo" className="new-todo" placeholder='New To-Do...' onChange={e => setNewTodo(e.target.value)}></input>
                 <button disabled={!newTodo} onClick={handleTodos}
